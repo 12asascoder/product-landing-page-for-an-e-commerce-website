@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Towards Infinity Smartwatch - Premium wearable technology with advanced health features">
+    <title>Towards Infinity Smartwatch - Tech Store</title>
+    <script src="https://unpkg.com/framer-motion@9.0.2/dist/framer-motion.production.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-400 via-indigo-500 to-purple-600 min-h-screen">
+    <!-- Enhanced Navigation with Mobile Menu -->
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-8">
+                <span class="text-2xl font-bold text-indigo-600">Towards Infinity</span>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#" class="hover:text-indigo-600">About</a>
+                    <a href="#" class="hover:text-indigo-600">Products</a>
+                    <a href="#" class="hover:text-indigo-600">Blogs</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="md:hidden" id="menuBtn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+                <button class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden absolute w-full bg-white/90" id="mobileMenu">
+            <div class="px-6 py-4 space-y-4">
+                <a href="#" class="block hover:text-indigo-600">About</a>
+                <a href="#" class="block hover:text-indigo-600">Events</a>
+                <a href="#" class="block hover:text-indigo-600">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Product Overview -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <motion.div 
+                class="w-full md:w-1/2 bg-white p-8 rounded-2xl shadow-xl"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            >
+                <img src="product-image.jpg" alt="Smartwatch" class="w-full h-96 object-contain" loading="lazy">
+            </motion.div>
+
+            <div class="w-full md:w-1/2 text-white">
+                <h1 class="text-5xl font-bold mb-6">Towards Infinity Smartwatch Pro X</h1>
+                <p class="text-xl mb-8">Advanced health monitoring with 50m water resistance and 2-week battery life</p>
+                
+                <!-- Product Specifications Table -->
+                <div class="bg-white/20 p-6 rounded-xl mb-8 backdrop-blur-sm">
+                    <h3 class="text-xl font-bold mb-4">Technical Specs</h3>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div class="flex justify-between">
+                            <span>Display:</span>
+                            <span>1.78" AMOLED</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Battery:</span>
+                            <span>14 days</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Water Resistance:</span>
+                            <span>5 ATM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>GPS:</span>
+                            <span>Dual-band</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4 mb-8">
+                    <span class="text-3xl font-bold">Rs.2999</span>
+                    <span class="line-through text-gray-200">Rs.6999</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">57% OFF</span>
+                </div>
+                <motion.button 
+                    class="bg-white text-indigo-600 px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    🛒 Add to Cart
+                </motion.button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Product Features -->
+    <section class="bg-white/20 backdrop-blur-lg py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-white mb-12 text-center">Advanced Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <motion.div 
+                    class="bg-white p-6 rounded-xl shadow-lg"
+                    whileHover={{ y: -10 }}
+                >
+                    <div class="text-indigo-600 text-4xl mb-4">❤️</div>
+                    <h3 class="text-xl font-bold mb-2">Health Monitoring</h3>
+                    <p class="text-gray-600">ECG, SpO2, sleep tracking, and stress monitoring</p>
+                </motion.div>
+
+                <motion.div 
+                    class="bg-white p-6 rounded-xl shadow-lg"
+                    whileHover={{ y: -10 }}
+                >
+                    <div class="text-indigo-600 text-4xl mb-4">🏃</div>
+                    <h3 class="text-xl font-bold mb-2">100+ Sports Modes</h3>
+                    <p class="text-gray-600">Professional tracking for swimming, hiking, and yoga</p>
+                </motion.div>
+
+                <motion.div 
+                    class="bg-white p-6 rounded-xl shadow-lg"
+                    whileHover={{ y: -10 }}
+                >
+                    <div class="text-indigo-600 text-4xl mb-4">📶</div>
+                    <h3 class="text-xl font-bold mb-2">4G Connectivity</h3>
+                    <p class="text-gray-600">Make calls and stream music without your phone</p>
+                </motion.div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Customer Reviews -->
+    <section class="container mx-auto px-6 py-16">
+        <h2 class="text-4xl font-bold text-white mb-12 text-center">Customer Experiences</h2>
+        <div class="swiper reviews-swiper relative">
+            <div class="swiper-wrapper">
+                <!-- Review 1 -->
+                <div class="swiper-slide">
+                    <div class="bg-white/20 p-6 rounded-xl backdrop-blur-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-full mr-3"></div>
+                            <div>
+                                <h4 class="font-bold text-white">Sarah J.</h4>
+                                <div class="flex items-center">
+                                    <div class="text-yellow-400">★★★★★</div>
+                                    <span class="text-sm text-gray-200 ml-2">2 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-white">"The battery life is incredible! Lasts through my week-long camping trips with GPS tracking enabled."</p>
+                    </div>
+                </div>
+
+                <!-- Additional Reviews -->
+                <div class="swiper-slide">
+                    <div class="bg-white/20 p-6 rounded-xl backdrop-blur-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-pink-100 rounded-full mr-3"></div>
+                            <div>
+                                <h4 class="font-bold text-white">Mike R.</h4>
+                                <div class="flex items-center">
+                                    <div class="text-yellow-400">★★★★☆</div>
+                                    <span class="text-sm text-gray-200 ml-2">1 week ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-white">"Accurate health metrics. The ECG feature gave me early warning about irregular heart patterns!"</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="bg-white/20 p-6 rounded-xl backdrop-blur-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-full mr-3"></div>
+                            <div>
+                                <h4 class="font-bold text-white">Emma L.</h4>
+                                <div class="flex items-center">
+                                    <div class="text-yellow-400">★★★★★</div>
+                                    <span class="text-sm text-gray-200 ml-2">3 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-white">"Love the always-on display and customizable watch faces. Feels premium on the wrist."</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="bg-white/20 p-6 rounded-xl backdrop-blur-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full mr-3"></div>
+                            <div>
+                                <h4 class="font-bold text-white">David K.</h4>
+                                <div class="flex items-center">
+                                    <div class="text-yellow-400">★★★★★</div>
+                                    <span class="text-sm text-gray-200 ml-2">1 month ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-white">"Best smartwatch for swimmers - tracks laps accurately and survives saltwater exposure!"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Review Submission Form -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="max-w-2xl mx-auto bg-white/20 p-8 rounded-xl backdrop-blur-sm">
+            <h3 class="text-2xl font-bold text-white mb-6">Share Your Experience</h3>
+            <form class="space-y-4">
+                <div class="flex gap-1 [&>button]:text-2xl [&>button]:p-1" id="ratingStars">
+                    <button type="button">☆</button>
+                    <button type="button">☆</button>
+                    <button type="button">☆</button>
+                    <button type="button">☆</button>
+                    <button type="button">☆</button>
+                </div>
+                <textarea 
+                    class="w-full rounded-lg p-4 bg-white/20 border border-white/30 text-white placeholder-white/50"
+                    placeholder="Write your review..."
+                    rows="4"
+                ></textarea>
+                <button class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">
+                    Submit Review
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Enhanced Swiper Configuration
+        const reviewsSwiper = new Swiper('.reviews-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+
+        // Star Rating Interaction
+        const stars = document.querySelectorAll('#ratingStars button');
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                stars.forEach((s, i) => {
+                    s.textContent = i <= index ? '★' : '☆';
+                    s.style.color = i <= index ? '#ffd700' : '#ffffff';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
